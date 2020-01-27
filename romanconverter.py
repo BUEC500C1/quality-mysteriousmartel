@@ -5,6 +5,6 @@ digitLen = len(araNum)
 
 if (digitLen >= 4):
 	pass
-	
+
 def digit_convert(number):
-	numberStr = string(number)
+	numberStr = str(number)
