@@ -1,6 +1,7 @@
 # Copyright 2020 by Jennifer Campbell
 
-from romanconverter import *
+import unittest
+from romanconverter import whatHaveTheRomans
 
 checkLib = {1: '1', 2: 15, 3: '49', 4: '58', \
 5: '99', 6: 300, 7: '459', 8: '567', 9: '999', \
@@ -13,9 +14,9 @@ ansLib = {1: 'I', 2: 'XV', 3: 'XLIX', 4: 'LVIII', \
 12: 'MMMMI', 13: False, 14: False, 15: False, \
 16: False}
 
+class RomanTestCase(unittest.TestCase):
 
-
-if __name__ == '__main__':
-	i = 1
-	for i in range(len(checkLib)):
-		print(whatHaveTheRomans(checkLib[i]))
+	def test_RomanConvert(self):
+		for i in range(len(checkLib)):
+			passCheck = whatHaveTheRomans(checkLib[i])
+			self.assertEqual(passCheck, ansLib[i])
