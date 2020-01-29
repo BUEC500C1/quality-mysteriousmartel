@@ -17,7 +17,6 @@ ansLib = {1: 'I', 2: 'XV', 3: 'XLIX', 4: 'LVIII', \
 class RomanTestCase(unittest.TestCase):
 
 	def test_RomanConvert(self):
-		i = 1
-		for i in range(len(checkLib)):
+		for i in range(1,len(checkLib)):
 			passCheck = whatHaveTheRomans(checkLib[i])
 			self.assertEqual(passCheck, ansLib[i])
